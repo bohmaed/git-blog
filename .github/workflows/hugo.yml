@@ -34,11 +34,13 @@ jobs:
         with:
           submodules: recursive
           
-      # خطوة تلقائية لجلب قالب Blowfish لكي لا تضطر لتحميله يدوياً
-      - name: Download Blowfish Theme
+      - name: Setup Blowfish Theme
         run: |
-          mkdir -p themes/blowfish
-          git clone https://github.com/nunocoracao/blowfish.git themes/blowfish
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf themes/blowfish
+          mkdir -p themes
+          git clone --depth 1 https://github.com/nunocoracao/blowfish.git themes/blowfish
 
       - name: Setup Pages
         id: pages
