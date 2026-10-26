@@ -1,0 +1,8 @@
+baseURL = 'https://example.org/'
+languageCode = 'ar'
+title = 'مدونتي الشخصية'
+theme = 'blowfish'
+
+[params]
+  defaultTheme = 'dark'
+  showSummary = true
