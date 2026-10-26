@@ -16,5 +16,6 @@ collections:
     fields:
       - { label: "العنوان", name: "title", widget: "string" }
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
-      - { label: "مسودة", name: "draft", widget: "boolean", default: false }
+      - { label: "الوصف", name: "description", widget: "string", required: false }
+      - { label: "مسودة؟", name: "draft", widget: "boolean", default: false }
       - { label: "المحتوى", name: "body", widget: "markdown" }
