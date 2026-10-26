@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bohmaed/git-blog
   branch: main
-  auth_type: token
+  auth_type: ""
 
 media_folder: "static/images"
 public_folder: "/images"
