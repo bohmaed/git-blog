@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bohmaed/git-blog  # اكتب اسم حسابك بدلاً من username
   branch: main
-  site_domain: bohmaed.github.io/git-blog
+  base_url: https://sveltia-cms-auth.vercel.app
 
 media_folder: "static/images"
 public_folder: "/images"
