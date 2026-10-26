@@ -3,6 +3,7 @@ backend:
   repo: bohmaed/git-blog  # اكتب اسم حسابك بدلاً من username
   branch: main
   base_url: https://sveltia-cms-auth.vercel.app
+  auth_endpoint: auth
 
 media_folder: "static/images"
 public_folder: "/images"
