@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'ar'
-title = 'مدونتي الشخصية'
+title = 'مدونة أثير'
 theme = 'blowfish'
 
 [params]
