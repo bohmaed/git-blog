@@ -1,9 +1,7 @@
 backend:
   name: github
-  repo: bohmaed/git-blog  # اكتب اسم حسابك بدلاً من username
+  repo: bohmaed/git-blog
   branch: main
-  base_url: https://sveltia-cms-auth.vercel.app
-  auth_endpoint: auth
 
 media_folder: "static/images"
 public_folder: "/images"
@@ -13,9 +11,9 @@ collections:
     label: "المقالات"
     folder: "content/posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "العنوان", name: "title", widget: "string"}
-      - {label: "تاريخ النشر", name: "date", widget: "datetime"}
-      - {label: "الوصف", name: "description", widget: "string"}
-      - {label: "المحتوى", name: "body", widget: "markdown"}
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "تاريخ النشر", name: "date", widget: "datetime" }
+      - { label: "مسودة", name: "draft", widget: "boolean", default: false }
+      - { label: "المحتوى", name: "body", widget: "markdown" }
