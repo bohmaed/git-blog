@@ -1,7 +1,8 @@
 baseURL = 'https://example.org/'
 languageCode = 'ar'
+defaultContentLanguage = "ar"
 title = 'مدونة أثير'
-theme = 'blowfish'
+theme = 'newsroom'
 
 [params]
   defaultTheme = 'dark'
