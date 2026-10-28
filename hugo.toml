@@ -1,4 +1,5 @@
 baseURL = 'https://bohmaed.github.io/git-blog/'
+canonifyURLs = true
 languageCode = 'ar'
 defaultContentLanguage = 'ar'
 title = 'مدونتي الرقمية'
