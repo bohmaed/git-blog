@@ -18,14 +18,23 @@ collections:
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
       - { label: "الوصف", name: "description", widget: "string", required: false }
       
-      # --- حقل الوسوم ---
+      # الصورة البارزة للمقال
+      - label: "الصورة البارزة"
+        name: "image"
+        widget: "image"
+        required: false
+
+      # اسم الكاتب
+      - { label: "الكاتب", name: "author", widget: "string", required: false, default: "مدير الموقع" }
+
+      # الوسوم
       - label: "الوسوم"
         name: "tags"
         widget: "list"
         required: false
 
-      # --- حقل التصنيف الرئيسي (مع زر إضافة حرّة Add) ---
-      - label: "التصنيف الرئيسي"
+      # التصنيفات الرئيسية
+      - label: "التصنيفات"
         name: "categories"
         widget: "list"
         required: false
