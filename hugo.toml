@@ -6,32 +6,27 @@ title = 'مدونتي الرقمية'
 theme = 'newsroom'
 
 [params]
-  description = "مجلة ومدونة شخصية تهتم بالتقنية والمحتوى الرقمي"
+  description = "مدونة ومجلة رقمية شخصية"
   dateFormat = "January 2, 2006"
-  author = "صاحب المدونة"
 
-# --- القائمة العلوية لشريط التنقل (Navigation Bar) ---
+# تعريف القائمة العلوية بشكل صحيح ليراها قالب Newsroom
 [menu]
   [[menu.main]]
-    identifier = "posts"
     name = "الرئيسية"
     url = "/"
     weight = 1
 
   [[menu.main]]
-    identifier = "categories"
     name = "التصنيفات"
     url = "/categories/"
     weight = 2
 
   [[menu.main]]
-    identifier = "about"
     name = "عن الموقع"
     url = "/about/"
     weight = 3
 
   [[menu.main]]
-    identifier = "contact"
     name = "اتصل بنا"
     url = "/contact/"
     weight = 4
