@@ -1,9 +1,9 @@
 main:
-  - item: About
+  - item: عن المدونة
     url: about/
-  - item: Blog
+  - item: الرئيسية
     url: ""
-  - item: Category
+  - item: التصنيفات
     url: categories
-  - item: Tag
+  - item: الوسوم
     url: tags
