@@ -39,3 +39,15 @@ theme = 'newsroom'
     name = "اتصل بنا"
     url = "/contact/"
     weight = 5
+
+
+
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = 'page'
+
+[permalinks]
+pages = ':contentbasename/'
+# If you want to use disqus, uncomment the line below
+# disqusShortname = "yourdiscussshortname"
