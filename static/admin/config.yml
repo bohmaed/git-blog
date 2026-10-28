@@ -4,8 +4,8 @@ backend:
   branch: main
   auth_type: ""
 
-media_folder: "static/images"
-public_folder: "/images"
+media_folder: ""
+public_folder: ""
 
 collections:
   - name: "posts"
