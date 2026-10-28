@@ -2,8 +2,7 @@ backend:
   name: github
   repo: bohmaed/git-blog
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: /auth
+  auth_type: implicit
 
 media_folder: "static/images"
 public_folder: "/images"
@@ -18,19 +17,14 @@ collections:
       - { label: "العنوان", name: "title", widget: "string" }
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
       - { label: "الوصف", name: "description", widget: "string", required: false }
-      
-      # --- 1. إضافة حقل الوسوم (Tags) كقائمة (List) ---
       - label: "الوسوم"
         name: "tags"
         widget: "list"
         required: false
-
-      # --- 2. مثال على قائمة منسدلة اختيارية (Select) ---
       - label: "التصنيف الرئيسي"
         name: "category"
         widget: "select"
         options: ["أخبار عامة", "تقنية", "مقالات رأي"]
         required: false
-
       - { label: "مسودة؟", name: "draft", widget: "boolean", default: false }
       - { label: "المحتوى", name: "body", widget: "markdown" }
