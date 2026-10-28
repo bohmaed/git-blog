@@ -2,7 +2,7 @@ backend:
   name: github
   repo: bohmaed/git-blog
   branch: main
-  
+  auth_type: ""
 
 media_folder: "static/images"
 public_folder: "/images"
@@ -17,14 +17,19 @@ collections:
       - { label: "العنوان", name: "title", widget: "string" }
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
       - { label: "الوصف", name: "description", widget: "string", required: false }
+      
+      # --- حقل الوسوم ---
       - label: "الوسوم"
         name: "tags"
         widget: "list"
         required: false
+
+      # --- القائمة المنسدلة ---
       - label: "التصنيف الرئيسي"
         name: "category"
         widget: "select"
         options: ["أخبار عامة", "تقنية", "مقالات رأي"]
         required: false
+
       - { label: "مسودة؟", name: "draft", widget: "boolean", default: false }
       - { label: "المحتوى", name: "body", widget: "markdown" }
