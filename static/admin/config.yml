@@ -18,17 +18,16 @@ collections:
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
       - { label: "الوصف", name: "description", widget: "string", required: false }
       
-      # --- حقل الوسوم ---
+      # الوسوم
       - label: "الوسوم"
         name: "tags"
         widget: "list"
         required: false
 
-      # --- القائمة المنسدلة ---
-      - label: "التصنيف الرئيسي"
-        name: "category"
-        widget: "select"
-        options: ["أخبار عامة", "تقنية", "مقالات رأي"]
+      # التصنيفات (بزر إضافة حرّ مثل الوسوم)
+      - label: "التصنيفات"
+        name: "categories"
+        widget: "list"
         required: false
 
       - { label: "مسودة؟", name: "draft", widget: "boolean", default: false }
