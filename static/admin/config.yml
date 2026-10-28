@@ -2,8 +2,8 @@ backend:
   name: github
   repo: bohmaed/git-blog
   branch: main
-  base_url: https://bohmaed.github.io
-  auth_endpoint: https://api.netlify.com/auth  # (إذا كنت تستخدم مصادقة نتلايفاي أو خدمة بديلة)
+  base_url: https://api.netlify.com
+  auth_endpoint: /auth
 
 media_folder: "static/images"
 public_folder: "/images"
