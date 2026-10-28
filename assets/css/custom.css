@@ -1,0 +1,15 @@
+/* ضبط الموقع بالكامل ليكون من اليمين لليسار */
+body, html {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* ضبط العناوين والنصوص والروابط لتبدأ من اليمين */
+h1, h2, h3, h4, h5, h6, p, li, a {
+  text-align: right !important;
+}
+
+/* ضبط شريط التنقل والقوائم لتصطف من اليمين */
+nav, .menu, .nav-links {
+  direction: rtl !important;
+}
