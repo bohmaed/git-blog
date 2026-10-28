@@ -18,14 +18,14 @@ collections:
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
       - { label: "الوصف", name: "description", widget: "string", required: false }
       
-      # الوسوم
+      # --- حقل الوسوم ---
       - label: "الوسوم"
         name: "tags"
         widget: "list"
         required: false
 
-      # التصنيفات (بزر إضافة حرّ مثل الوسوم)
-      - label: "التصنيفات"
+      # --- حقل التصنيف الرئيسي (مع زر إضافة حرّة Add) ---
+      - label: "التصنيف الرئيسي"
         name: "categories"
         widget: "list"
         required: false
