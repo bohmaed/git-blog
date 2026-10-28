@@ -18,5 +18,19 @@ collections:
       - { label: "العنوان", name: "title", widget: "string" }
       - { label: "تاريخ النشر", name: "date", widget: "datetime" }
       - { label: "الوصف", name: "description", widget: "string", required: false }
+      
+      # --- 1. إضافة حقل الوسوم (Tags) كقائمة (List) ---
+      - label: "الوسوم"
+        name: "tags"
+        widget: "list"
+        required: false
+
+      # --- 2. مثال على قائمة منسدلة اختيارية (Select) ---
+      - label: "التصنيف الرئيسي"
+        name: "category"
+        widget: "select"
+        options: ["أخبار عامة", "تقنية", "مقالات رأي"]
+        required: false
+
       - { label: "مسودة؟", name: "draft", widget: "boolean", default: false }
       - { label: "المحتوى", name: "body", widget: "markdown" }
