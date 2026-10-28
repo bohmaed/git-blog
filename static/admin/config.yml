@@ -6,6 +6,7 @@ backend:
 
 media_folder: "static/images"
 public_folder: "/images"
+
 collections:
   - name: "posts"
     label: "المقالات"
@@ -15,29 +16,29 @@ collections:
     fields:
       - { label: "العنوان", name: "title", widget: "string" }
       
-      # --- تاريخ النشر محدد بصيغة زملية دقيقة تضمن الظهور الفوري ---
+      # التاريخ بالصيغة القياسية لمنع اختفاء المقالات
       - label: "تاريخ النشر"
         name: "date"
         widget: "datetime"
         format: "YYYY-MM-DDTHH:mm:ssZ"
-        date_format: "YYYY-MM-DD"
-        time_format: "HH:mm:ss"
 
       - { label: "الوصف", name: "description", widget: "string", required: false }
       
-      # --- الصورة البارزة والكاتب ---
+      # الصورة البارزة (الاسم الصحيح الذي يقرأه الثيم featured_image)
       - label: "الصورة البارزة"
-        name: "image"
+        name: "featured_image"
         widget: "image"
         required: false
+
       - { label: "الكاتب", name: "author", widget: "string", required: false, default: "مدير الموقع" }
 
-      # --- الوسوم والتصنيفات القياسية لـ Hugo ---
+      # الوسوم (تعمل كقائمة صحيحة)
       - label: "الوسوم"
         name: "tags"
         widget: "list"
         required: false
 
+      # التصنيفات (تعمل كقائمة صحيحة لتظهر في القوائم المنسدلة)
       - label: "التصنيفات"
         name: "categories"
         widget: "list"
