@@ -1,54 +1,96 @@
-baseURL = 'https://bohmaed.github.io/git-blog/'
-languageCode = 'ar-AR'
-languageDirection = 'rtl'defaultContentLanguage = 'ar'
-title = 'مدونتي الرقمية'
-theme = 'zahi'
+# Zahi Theme Configuration
+# This file specifies Hugo version requirements for the theme
 
-[params]
-  description = "مجلة ومدونة شخصية"
-  dateFormat = "January 2, 2006"
-  rtl = true
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.112.0"
 
-# 1. تعريف التصنيفات والوسوم إجبارياً لكي يقرأها Hugo والثيم
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+# Default outputs for the theme
+[outputs]
+  home = ["HTML", "RSS", "JSON", "ROBOTS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
-# 2. القائمة العلوية وروابط التنقل
-[menu]
-  [[menu.main]]
-    name = "الرئيسية"
-    url = "/"
-    weight = 1
+# Media types
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
 
-  [[menu.main]]
-    name = "التصنيفات"
-    url = "/categories/"
-    weight = 2
+# Output formats
+[outputFormats]
+  [outputFormats.ROBOTS]
+    mediaType = "text/plain"
+    baseName = "robots"
+    isPlainText = true
+    notAlternative = true
 
-  [[menu.main]]
-    name = "الوسوم"
-    url = "/tags/"
-    weight = 3
+# Sitemap configuration
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
-  [[menu.main]]
-    name = "عن الموقع"
-    url = "/about/"
-    weight = 4
+# Markup configuration for better content
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      footnote = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    noClasses = false
+    style = "dracula"
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
 
-  [[menu.main]]
-    name = "اتصل بنا"
-    url = "/contact/"
-    weight = 5
+# Minify output
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
 
+# Related content configuration
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "series"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
-
-[pagination]
-disableAliases = false
-pagerSize = 10
-path = 'page'
-
-[permalinks]
-pages = ':contentbasename/'
-# If you want to use disqus, uncomment the line below
-# disqusShortname = "yourdiscussshortname"
+# Privacy settings (GDPR compliant)
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
