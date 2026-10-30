@@ -1,0 +1,13 @@
+html, body {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, a, span, div {
+  text-align: right !important;
+}
+
+.post_title, .post_date, .post_body {
+  text-align: right !important;
+  direction: rtl !important;
+}
