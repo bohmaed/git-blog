@@ -1,15 +1,17 @@
-/* ضبط الموقع بالكامل ليكون من اليمين لليسار */
-body, html {
+/* فرض اتجاه اليمين لجميع عناصر الموقع */
+html, body {
   direction: rtl !important;
   text-align: right !important;
 }
 
-/* ضبط العناوين والنصوص والروابط لتبدأ من اليمين */
-h1, h2, h3, h4, h5, h6, p, li, a {
+/* محاذاة كافة العناوين والنصوص والروابط إلى اليمين */
+h1, h2, h3, h4, h5, h6, p, li, a, span, div, .post_title, .post_date, .post_body {
   text-align: right !important;
+  direction: rtl !important;
 }
 
-/* ضبط شريط التنقل والقوائم لتصطف من اليمين */
-nav, .menu, .nav-links {
+/* تعديل محاذاة شريط التنقل العلوي والقوائم لتتوافق مع الـ RTL */
+nav, .menu, .nav-links, header {
   direction: rtl !important;
+  text-align: right !important;
 }
