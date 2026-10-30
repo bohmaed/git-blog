@@ -26,7 +26,7 @@ collections:
       
       # الصورة البارزة (الاسم الصحيح الذي يقرأه الثيم featured_image)
       - label: "الصورة البارزة"
-        name: "featured_image"
+        name: "image"
         widget: "image"
         required: false
 
