@@ -1,96 +1,59 @@
-# Zahi Theme Configuration
-# This file specifies Hugo version requirements for the theme
+theme = "zahi"
+languageCode = "ar"
+defaultContentLanguage = "ar"
 
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.112.0"
+[taxonomies]
+tag = "tags"
+series = "series"
 
-# Default outputs for the theme
+enableRobotsTXT = true   # theme provides robots.txt with the sitemap link
+
 [outputs]
-  home = ["HTML", "RSS", "JSON", "ROBOTS"]
-  section = ["HTML", "RSS"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 
-# Media types
-[mediaTypes]
-  [mediaTypes."text/plain"]
-    suffixes = ["txt"]
+[params]
+description = "وصف موقعك"
+author = "اسمك"
 
-# Output formats
-[outputFormats]
-  [outputFormats.ROBOTS]
-    mediaType = "text/plain"
-    baseName = "robots"
-    isPlainText = true
-    notAlternative = true
+# SEO / Google Search Console (all optional)
+# ogImage = "images/og-default.png"   # default share image, 1200x630, in static/
+[params.verification]
+google = "code-from-search-console"   # HTML-tag verification: only the content value
+# bing = ""
+# yandex = ""
 
-# Sitemap configuration
-[sitemap]
-  changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"
+[params.social]
+twitter = "username"
+github = "username"
+linkedin = "username"
 
-# Markup configuration for better content
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-    [markup.goldmark.extensions]
-      footnote = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = true
-    lineNos = false
-    noClasses = false
-    style = "dracula"
-  [markup.tableOfContents]
-    endLevel = 4
-    ordered = false
-    startLevel = 2
+[menu]
+[[menu.main]]
+name = "الرئيسية"
+url = "/"
+weight = 1
 
-# Minify output
-[minify]
-  disableCSS = false
-  disableHTML = false
-  disableJS = false
-  disableJSON = false
-  disableSVG = false
-  disableXML = false
-  minifyOutput = true
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-      keepWhitespace = false
+[[menu.main]]
+name = "المقالات"
+url = "/posts/"
+weight = 2
 
-# Related content configuration
-[related]
-  includeNewer = true
-  threshold = 80
-  toLower = true
-  [[related.indices]]
-    name = "tags"
-    weight = 100
-  [[related.indices]]
-    name = "series"
-    weight = 80
-  [[related.indices]]
-    name = "date"
-    weight = 10
+[[menu.main]]
+name = "المشاريع"
+url = "/projects/"
+weight = 3
 
-# Privacy settings (GDPR compliant)
-[privacy]
-  [privacy.disqus]
-    disable = false
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    respectDoNotTrack = true
-  [privacy.twitter]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
+[[menu.main]]
+name = "الوسوم"
+url = "/tags/"
+weight = 4
+
+[[menu.main]]
+name = "السلاسل"
+url = "/series/"
+weight = 5
+
+[[menu.main]]
+name = "الشبكة"
+url = "/graph/"
+weight = 6
