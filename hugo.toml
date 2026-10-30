@@ -2,7 +2,7 @@ baseURL = 'https://bohmaed.github.io/git-blog/'
 languageCode = 'ar-AR'
 languageDirection = 'rtl'defaultContentLanguage = 'ar'
 title = 'مدونتي الرقمية'
-theme = 'newsroom'
+theme = 'zahi'
 
 [params]
   description = "مجلة ومدونة شخصية"
