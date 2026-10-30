@@ -1,12 +1,13 @@
 baseURL = 'https://bohmaed.github.io/git-blog/'
-languageCode = 'ar'
-defaultContentLanguage = 'ar'
+languageCode = 'ar-AR'
+languageDirection = 'rtl'defaultContentLanguage = 'ar'
 title = 'مدونتي الرقمية'
 theme = 'newsroom'
 
 [params]
   description = "مجلة ومدونة شخصية"
   dateFormat = "January 2, 2006"
+  rtl = true
 
 # 1. تعريف التصنيفات والوسوم إجبارياً لكي يقرأها Hugo والثيم
 [taxonomies]
